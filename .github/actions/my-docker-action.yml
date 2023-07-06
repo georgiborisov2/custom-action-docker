@@ -1,0 +1,14 @@
+name: 'Docker Run Action'
+description: 'Runs the build process with Docker'
+inputs:
+  image:
+    description: 'The Docker image to use'
+    required: true
+    default: 'owasp/zap2docker-stable'
+  options:
+    description: 'Additional options for the `docker run` command'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
